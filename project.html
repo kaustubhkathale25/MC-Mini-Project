@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Labs - LAUC</title>
 
-    <!-- Font Awesome Icons -->
+    <title>Virtual Lab - Heat Flow</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -19,7 +21,7 @@
         }
 
         body{
-            background:#f8f9fa;
+            background:#f4f7fa;
             color:#333;
         }
 
@@ -32,9 +34,10 @@
         /* HEADER */
 
         header{
-            background:linear-gradient(135deg,#2c3e50,#1a2530);
+            background:linear-gradient(135deg,#1f2d3d,#243447);
             color:white;
             padding:18px 0;
+            box-shadow:0 3px 10px rgba(0,0,0,0.1);
         }
 
         .header-container{
@@ -59,8 +62,8 @@
         .pcce-logo-img{
             width:60px;
             height:60px;
-            background:white;
             border-radius:8px;
+            background:white;
             padding:5px;
         }
 
@@ -77,12 +80,12 @@
         .virtual-labs-logo{
             display:flex;
             align-items:center;
-            gap:10px;
+            gap:12px;
         }
 
         .virtual-labs-logo i{
             font-size:30px;
-            color:#3498db;
+            color:#4db8ff;
         }
 
         .virtual-labs-logo h1{
@@ -90,7 +93,7 @@
         }
 
         .virtual-labs-logo span{
-            color:#3498db;
+            color:#4db8ff;
         }
 
         .user-info{
@@ -99,7 +102,7 @@
             gap:10px;
         }
 
-        /* MAIN SECTION */
+        /* MAIN CONTENT */
 
         .main-content{
             display:flex;
@@ -110,16 +113,16 @@
         /* SIDEBAR */
 
         .sidebar{
-            width:250px;
+            width:260px;
             background:white;
-            border-radius:10px;
             padding:20px;
+            border-radius:10px;
             box-shadow:0 2px 10px rgba(0,0,0,0.08);
         }
 
         .sidebar h3{
             margin-bottom:20px;
-            color:#2c3e50;
+            color:#243447;
         }
 
         .nav-menu{
@@ -155,39 +158,53 @@
         }
 
         .content-header h2{
-            color:#2c3e50;
+            font-size:32px;
             margin-bottom:10px;
+            color:#243447;
         }
+
+        .content-header p{
+            color:#666;
+        }
+
+        /* CARDS */
 
         .aim-sections{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
             gap:20px;
         }
 
         .section-card{
-            background:#f8f9fa;
+            background:#f8fbff;
             padding:25px;
             border-radius:10px;
             text-align:center;
+            border:2px solid transparent;
             transition:0.3s;
             cursor:pointer;
-            border:2px solid transparent;
         }
 
         .section-card:hover{
             transform:translateY(-5px);
             border-color:#3498db;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
         }
 
         .section-card i{
-            font-size:30px;
+            font-size:32px;
             color:#3498db;
             margin-bottom:15px;
         }
 
         .section-card h3{
-            margin-bottom:8px;
+            margin-bottom:10px;
+            color:#243447;
+        }
+
+        .section-card p{
+            color:#666;
+            font-size:14px;
         }
 
         /* FOOTER */
@@ -196,10 +213,10 @@
             margin-top:40px;
             text-align:center;
             padding:20px;
-            color:#777;
+            color:#666;
         }
 
-        /* MOBILE */
+        /* RESPONSIVE */
 
         @media(max-width:768px){
 
@@ -223,6 +240,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -230,6 +248,7 @@
     <!-- HEADER -->
 
     <header>
+
         <div class="container header-container">
 
             <div class="logo-section">
@@ -237,10 +256,11 @@
                 <div class="pcce-logo-container">
 
                     <img src="https://raw.githubusercontent.com/dineshkute90/virtual_lab_LAUC/main/pccoe.png"
-                        class="pcce-logo-img"
-                        alt="PCCOE Logo">
+                        alt="PCCOE Logo"
+                        class="pcce-logo-img">
 
                     <div class="pcce-logo-text">
+
                         <div class="main">
                             APPLIED SCIENCES & HUMANITIES
                         </div>
@@ -248,12 +268,13 @@
                         <div class="sub">
                             Pimpri Chinchwad College of Engineering
                         </div>
+
                     </div>
 
                 </div>
 
                 <div class="virtual-labs-logo">
-                    <i class="fas fa-flask"></i>
+                    <i class="fas fa-fire"></i>
                     <h1>Virtual <span>Labs</span></h1>
                 </div>
 
@@ -265,9 +286,10 @@
             </div>
 
         </div>
+
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN SECTION -->
 
     <div class="container main-content">
 
@@ -278,14 +300,23 @@
             <h3>Navigation</h3>
 
             <ul class="nav-menu">
+
                 <li class="nav-item active">Aim</li>
-                <li class="nav-item">Theory</li>
-                <li class="nav-item">Pretest</li>
-                <li class="nav-item">Simulation</li>
-                <li class="nav-item">Posttest</li>
+
+                <li class="nav-item">Theory of Heat Flow</li>
+
+                <li class="nav-item">Thermal Simulation</li>
+
+                <li class="nav-item">Temperature Analysis</li>
+
+                <li class="nav-item">Observation</li>
+
+                <li class="nav-item">Result</li>
+
                 <li class="nav-item">References</li>
-                <li class="nav-item">Contributors</li>
+
                 <li class="nav-item">Feedback</li>
+
             </ul>
 
         </div>
@@ -295,34 +326,113 @@
         <main class="content">
 
             <div class="content-header">
-                <h2>A Virtual Lab on Rank of Matrix</h2>
-                <p>Engineering Mathematics Experiment</p>
+
+                <h2>A Virtual Lab on Heat Flow</h2>
+
+                <p>
+                    Study of Heat Transfer and Temperature Distribution
+                </p>
+
             </div>
+
+            <!-- CARDS -->
 
             <div class="aim-sections">
 
                 <div class="section-card">
+
                     <i class="fas fa-bullseye"></i>
+
                     <h3>Aim</h3>
-                    <p>Objective of the experiment</p>
+
+                    <p>
+                        Understand the concept of heat transfer and flow.
+                    </p>
+
                 </div>
 
                 <div class="section-card">
+
                     <i class="fas fa-book"></i>
-                    <h3>Theory</h3>
-                    <p>Background concepts</p>
+
+                    <h3>Heat Transfer Theory</h3>
+
+                    <p>
+                        Learn conduction, convection and radiation concepts.
+                    </p>
+
                 </div>
 
                 <div class="section-card">
+
                     <i class="fas fa-desktop"></i>
-                    <h3>Simulation</h3>
-                    <p>Interactive simulation</p>
+
+                    <h3>Heat Flow Simulation</h3>
+
+                    <p>
+                        Observe temperature distribution practically.
+                    </p>
+
                 </div>
 
                 <div class="section-card">
-                    <i class="fas fa-comment"></i>
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <h3>Analysis</h3>
+
+                    <p>
+                        Analyze thermal behaviour and heat patterns.
+                    </p>
+
+                </div>
+
+                <div class="section-card">
+
+                    <i class="fas fa-clipboard-check"></i>
+
+                    <h3>Result</h3>
+
+                    <p>
+                        Evaluate the efficiency of heat transfer.
+                    </p>
+
+                </div>
+
+                <div class="section-card">
+
+                    <i class="fas fa-book-open"></i>
+
+                    <h3>References</h3>
+
+                    <p>
+                        Study additional thermal engineering resources.
+                    </p>
+
+                </div>
+
+                <div class="section-card">
+
+                    <i class="fas fa-users"></i>
+
+                    <h3>Contributors</h3>
+
+                    <p>
+                        Team members involved in this virtual lab project.
+                    </p>
+
+                </div>
+
+                <div class="section-card">
+
+                    <i class="fas fa-comment-alt"></i>
+
                     <h3>Feedback</h3>
-                    <p>Share your experience</p>
+
+                    <p>
+                        Share your learning experience and suggestions.
+                    </p>
+
                 </div>
 
             </div>
@@ -334,8 +444,13 @@
     <!-- FOOTER -->
 
     <footer>
-        Virtual Labs © 2025 | PCCOE
+
+        Virtual Labs © 2025 |
+        Applied Sciences & Humanities Department |
+        PCCOE
+
     </footer>
 
 </body>
+
 </html>
